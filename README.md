@@ -6,9 +6,6 @@ This is a simple HTML + JavaScript web app that allows users to type a message i
 ## 🔧 Features
 
 - Live character counter
-- Displays:
-  - `Characters Typed: X/200`
-  - `Remaining: Y/200`
 - Prevents typing beyond 200 characters
 - Shows a red warning message when the character limit is reached
 
@@ -39,5 +36,5 @@ While this version is not fully responsive, you can easily enhance it by wrappin
 
 ## 🔗 Links
 
-- 🔗 GitHub Repo: [Character Counter](https://github.com/YOUR_USERNAME/character-counter)
-- 🌐 Live Demo: [View Demo](https://YOUR_USERNAME.github.io/character-counter/)
+- 🔗 GitHub Repo: https://github.com/DVV24/Summary-textarea1
+- 🌐 Live Demo: https://dvv24.github.io/Summary-textarea1/
