@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter</title>
+  <style>
+    #txt {
+      align-items: center;
+      top: 100px;
+      width: 98%;
+      height: 150px;
+      margin: 10px;
+     
+    }
+
+    div {
+      display: inline;
+    }
+
+    #warning {
+      color: red;
+      font-weight: bold;
+      display: none;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-family:Arial, Helvetica, sans-serif;">Summary</Summary></h1>
+  <textarea id="txt" placeholder="200 characters max"></textarea>
+  <br>
+  <div id="type">Characters Typed: 0/200</div>
+  <div id="remaining">Remaining: 200/200</div>
+  <div id="warning">⚠️ Character limit reached!</div>
+</body>
+</html>
+
+<script>
+  const txt = document.getElementById("txt");
+  const type = document.getElementById("type");
+  const remain = document.getElementById("remaining");
+  const warning = document.getElementById("warning");
+  const max_chars = 200;
+
+  txt.addEventListener('input', () => {
+    let typedLength = txt.value.length;
+
+    if (typedLength > max_chars) {
+      txt.value = txt.value.substring(0, max_chars);
+      typedLength = max_chars;
+    }
+
+    const remaining = max_chars - typedLength;
+
+    type.textContent = `Characters Typed: ${typedLength}/200`;
+    remain.textContent = `Remaining: ${remaining}/200`;
+
+    if (typedLength >= max_chars) {
+      warning.style.display = "inline";
+    } else {
+      warning.style.display = "none";
+    }
+  });
+</script>
